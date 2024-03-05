@@ -3,11 +3,13 @@ import { DcPage } from "../pages/DcPage";
 import { HeroPage } from "../pages/HeroPage";
 import { MarvelPage } from "../pages/MarvelPage";
 import { SearchPage } from "../pages/SearchPage";
+import { PrivateRoute } from "../../../src/router/PrivateRoute";
+
 
 export const routesHeroesConfig = [
     {
         path: "dc",
-        element: <DcPage />,
+        element: <DcPage/>,
     },
     {
         path: "marvel",
@@ -29,7 +31,13 @@ export const routesHeroesConfig = [
         path: "search",
         element: <SearchPage />,
     },
+    {
+        path: "/",
+        element: <PrivateRoute />,
+    },
+
+
 ]
- 
+
 export const getHeroesRoutes = () => createBrowserRouter(routesHeroesConfig);
- 
+

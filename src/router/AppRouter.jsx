@@ -6,10 +6,10 @@ import {
 } from "react-router-dom";
 import { getRoutes } from './routes';
 
-
+const router = getRoutes()
 
 export const AppRouter = () => {
-  const router = getRoutes()
+
   return (
     <>
       <RouterProvider router={router} />
